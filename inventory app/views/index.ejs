@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory</title>
+</head>
+<body>
+    <h1>Inventory List</h1>
+    <ul>
+        <% items.forEach(item => { %>
+            <li><%= item.name %> (<a href="/item/<%= item.id %>">View</a>)</li>
+        <% }) %>
+    </ul>
+    <a href="/new-item">Add New Item</a>
+</body>
+</html>

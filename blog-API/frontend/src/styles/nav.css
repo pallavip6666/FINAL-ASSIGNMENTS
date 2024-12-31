@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(27, 27, 27);
+  }
+  
+  .navRight,
+  .navLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="../folder.png" type="image/x-icon" />
+
+    <title>New folder</title>
+  </head>
+  <body>
+    <header>
+      <h1>Create a new folder</h1>
+    </header>
+
+    <div class="container">
+      <a class="back" href="/"> < go back</a>
+      <form action="/add-folder" method="POST">
+        <label for="name">Folder name</label>
+        <input type="text" id="name" name="name" placeholder="E.g. 'work' " />
+
+        <button class="logging-btn" type="submit">Create folder</button>
+      </form>
+    </div>
+    <footer>
+      designed by
+      <a id="github" href="https://github.com/dasha-solomkina"
+        >dasha-solomkina</a
+      >
+    </footer>
+  </body>
+</html>

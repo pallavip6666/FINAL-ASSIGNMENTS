@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" href="../folder.png" type="image/x-icon" />
+
+    <title>New file</title>
+  </head>
+  <body>
+    <header>
+      <h1>Upload a new file</h1>
+    </header>
+
+    <% if (folders) {%>
+
+    <div class="container">
+      <a class="back" href="/"> < go back </a>
+
+      <form action="/add-file" method="POST" enctype="multipart/form-data">
+        <label for="name">File name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="E.g. 'First semester schedule'"
+        />
+        <label for="folder">Folder</label>
+
+        <select name="folder" id="folder" required>
+          <% folders.forEach((folder) => { %>
+          <option value="<%= folder.id %>"><%= folder.name %></option>
+          <%})%>
+        </select>
+
+        <input type="file" name="upload" id="upload" />
+
+        <button class="logging-btn" type="submit">Upload file</button>
+      </form>
+    </div>
+
+    <% } else {%>
+    <div class="container">
+      <p class="error">Please first create a folder.</p>
+    </div>
+
+    <% } %>
+
+    <footer>
+      designed by
+      <a id="github" href="https://github.com/dasha-solomkina"
+        >dasha-solomkina</a
+      >
+    </footer>
+  </body>
+</html>

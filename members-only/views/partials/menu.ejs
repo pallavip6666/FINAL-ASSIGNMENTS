@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-md bg-primary sticky-top mb-4">
+    <div class="container-fluid">
+        <% if (locals.user) { %>
+            <h3 class="navbar-brand text-white">Hello, <%= user.username %></h3>
+        <% } else { %>
+            <h3 class="navbar-brand text-white">Clubhouse</h3>
+        <% } %>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav ms-auto d-flex gap-2">
+                <% if (locals.user) { %>
+                    <% if (user.membership === false) { %>
+                        <li class="nav-item"><a href="/join-club" class="nav-link text-white">Join club</a></li>
+                    <% } else if (user.membership === true && user.admin === false) { %>
+                        <li class="nav-item"><a href="/become-admin" class="nav-link text-white">Become Admin</a></li>
+                    <% } %>
+                    <li class="nav-item"><a href="/messages/new" class="nav-link text-white">New Message</a></li>
+                    <li class="nav-item"><a href="/messages" class="nav-link text-white">Messages</a></li>
+                    <li class="nav-item"><a href="/log-out" class="nav-link text-white">Log Out</a></li>
+                <% } else { %>
+                    <li class="nav-item"><a href="/sign-up" class="nav-link text-white">Sign Up</a></li>
+                    <li class="nav-item"><a href="/log-in" class="nav-link text-white">Log In</a></li>
+                <% } %>
+            </ul>        
+    </div>
+</nav>

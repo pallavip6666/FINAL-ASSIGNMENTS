@@ -1,0 +1,199 @@
+.postDivs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    width: 90vw;
+    background-color: rgb(27, 27, 27);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    h1 {
+      margin-bottom: 10px;
+      color: white;
+      background-color: rgb(94, 94, 94);
+      padding: 5px;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 10px;
+    }
+  }
+  
+  .post {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    img {
+      max-height: 250px;
+      min-height: 200px;
+      width: auto;
+      border: 2px solid white;
+      padding: 20px;
+    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+    width: 80%;
+  }
+  
+  .unpublishedPostDivs {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    width: 90vw;
+    background-color: rgb(94, 94, 94);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    h1 {
+      margin-bottom: 10px;
+      color: white;
+      background-color: rgb(27, 27, 27);
+      padding: 5px;
+      padding-left: 40px;
+      padding-right: 40px;
+      border-radius: 10px;
+    }
+  }
+  
+  .unpublishedPost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    img {
+      max-height: 250px;
+      min-height: 200px;
+      width: auto;
+      border: 2px solid white;
+      padding: 20px;
+    }
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid white;
+    width: 80%;
+  }
+  
+  .visitorMessage {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    a {
+      background-color: rgb(192, 0, 176);
+      color: white;
+      font-weight: 1000;
+      border: 1px solid white;
+      margin-top: 10px;
+      padding: 2px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 20px;
+    }
+    a:hover {
+      background-color: rgb(255, 0, 234);
+      cursor: pointer;
+    }
+    margin-bottom: 50px;
+  }
+  
+  .commentDiv {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    gap: 20px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50vw;
+    background-color: rgb(27, 27, 27);
+    border-radius: 30px;
+  }
+  
+  .commentPost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 20px;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    width: 80%;
+    border-bottom: 3px dotted white;
+  }
+  
+  .comments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: white;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    gap: 20px;
+  }
+  
+  .comment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    width: 90%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+  }
+  
+  button {
+    background-color: rgb(192, 0, 176);
+    color: white;
+    font-weight: 1000;
+    border: 1px solid white;
+    margin-top: 10px;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+  }
+  button:hover {
+    background-color: rgb(255, 0, 234);
+    cursor: pointer;
+  }
+  
+  .viewCommentsLink {
+    background-color: rgb(192, 0, 176);
+    color: white;
+    font-weight: 1000;
+    border: 1px solid white;
+    margin-top: 10px;
+    padding: 2px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+  }
+  .viewCommentsLink:hover {
+    background-color: rgb(255, 0, 234);
+    cursor: pointer;
+  }
+  
+  .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 20px;
+  }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+<body>
+    <%- include("partials/menu.ejs") %>
+    <div class="container">
+        <h1 class="text-center mb-4">Sign Up</h1>
+        <div class="container-fluid w-50">
+            <form action="/sign-up" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="firstName">First name</label>
+                    <input class="form-control" type="text" name="firstName" id="firstName" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="lastName">Last name</label>
+                    <input class="form-control" type="text" name="lastName" id="lastName" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="email">Email</label>
+                    <input class="form-control" type="email" name="email" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input class="form-control" type="text" name="username" id="username" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password1">Password</label>
+                    <input class="form-control" type="password" name="password1" id="password1" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="password2">Confirm password</label>
+                    <input class="form-control" type="password" name="password2" id="password2" required>
+                </div>
+                <button class="btn btn-primary" type="submit">Sign Up</button>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JavaScript and dependencies (jQuery and Popper.js) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

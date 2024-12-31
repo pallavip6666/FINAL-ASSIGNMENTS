@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>Join Club</title>
+</head>
+<body>
+    <%- include("partials/menu.ejs") %>
+    <div class="container text-center">
+        <h1>Get membership</h1>
+        <div class="container-fluid w-50 mt-4">
+            <% if (!locals.user.membership) { %>
+                <form action="/join-club" method="post">
+                    <div class="mb-3">
+                        <label for="secret" class="form-label">Enter secret passcode</label>
+                        <input type="password" name="secret" id="secret" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-warning">Join</button>
+                </form>
+            <% } else { %>
+                <div class="alert alert-secondary">You are already a member!</div>
+            <% } %>
+            <div class="text-center mt-4">
+                <% if (success && typeof success === "boolean") { %>
+                    <p class="alert alert-success"><%= message %></p>
+                <% } else if (!success && typeof success === "boolean") { %> 
+                    <p class="alert alert-danger"><%= message %></p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap JavaScript and dependencies (jQuery and Popper.js) -->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

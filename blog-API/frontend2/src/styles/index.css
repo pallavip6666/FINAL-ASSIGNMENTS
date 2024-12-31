@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-image: radial-gradient(
+      rgb(153, 153, 153),
+      rgb(16, 0, 87),
+      rgb(8, 1, 48)
+    );
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    padding-top: 120px;
+  }
+  
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }

@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    background-image: radial-gradient(white, rgb(173, 0, 179), rgb(48, 1, 48));
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+  
+  #root {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+  }

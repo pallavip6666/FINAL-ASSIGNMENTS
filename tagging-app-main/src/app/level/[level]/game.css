@@ -1,0 +1,122 @@
+.start-modal {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: #242424;
+  background-color: #1a1a1aaa;
+}
+
+.find-list {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  text-transform: capitalize;
+  justify-content: center;
+}
+
+.found {
+  border-color: green;
+  filter: none;
+  animation: activate 0.8s;
+}
+
+
+.no-found {
+  border-color: #757575;
+}
+
+.no-found>img {
+  filter: saturate(0.2);
+}
+
+.container {
+  width: fit-content;
+}
+
+.container>img {
+  transition: filter 0.5s;
+  cursor: crosshair;
+}
+
+.waiting {
+  filter: brightness(0.48) contrast(6.8) saturate(0.3);
+
+}
+
+.started {
+  filter: brightness(1) contrast(1) saturate(1);
+}
+
+.box {
+  visibility: hidden;
+  box-sizing: border-box;
+  position: absolute;
+  z-index: 8;
+  width: 56px;
+  height: 48px;
+  outline: 8px solid #0000;
+  --box-color: #d6e2e688;
+  background:
+    conic-gradient(from 90deg at top 8px left 8px, #0000 90deg, var(--box-color) 0) 0 0 / 30% 30% border-box no-repeat,
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, var(--box-color) 0) 100% 0 / 30% 30% border-box no-repeat,
+    conic-gradient(from 0deg at bottom 8px left 8px, #0000 90deg, var(--box-color) 0) 0 100% / 30% 30% border-box no-repeat,
+    conic-gradient(from -90deg at bottom 8px right 8px, #0000 90deg, var(--box-color) 0) 100% 100% / 30% 30% border-box no-repeat;
+  pointer-events: none;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.wait {
+  --box-color: #d4edffaf;
+  transform: scale(0.9);
+  background-color: #d8d8d842;
+}
+
+.container:hover+.box {
+  visibility: visible;
+}
+
+.find-list>article {
+  font-family: monospace;
+  font-size: smaller;
+  width: 80px;
+}
+
+.win-modal {
+  z-index: 5;
+  padding: 24px;
+  width: 100%;
+  max-width: 360px;
+  height: 100%;
+  max-height: 260px;
+}
+
+.win-modal>form {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.end:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@keyframes activate {
+  0% {
+    transform: scale(1);
+    background-color: transparent;
+  }
+
+  40% {
+    transform: scale(1.08);
+    background-color: #00a50052;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: transparent;
+  }
+}

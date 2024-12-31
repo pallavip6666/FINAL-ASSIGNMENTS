@@ -1,0 +1,112 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+  
+.profileSidebar {
+    position: fixed; 
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #f8f9fa;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    overflow-y: auto;
+    z-index: 1;
+}
+.imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.imgContainer > input:hover {
+    background-color: #eaeaea; 
+}
+.newPfpSelector {
+    background-color: #0056b3;
+}
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pfp {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+}
+
+.profileDetails {
+    margin-bottom: 0px;
+}
+
+.bio {
+    background-color: #f0f0f0;
+    padding: 7px;
+    border-radius: 10px;
+    max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    margin-top: 7px;
+}
+
+.hideButton {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    margin: 0;
+}
+
+.hideButton > img {
+    margin: 0;
+}
+.editButtons {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    margin: 10px 0px;
+}
+.username {
+    margin: 0;
+}
+.newInput {
+    border: 0;
+    background-color: #f8f9fa;
+    height: 36px;
+}
+@media (max-width: 826px) {
+    .profileSidebar {
+        width: 200px;
+    }
+}
+@media (max-width: 540px) {
+    .profileSidebar {
+        width: 90%; 
+    }
+    .hideButton {
+        position: absolute;
+        top: 1%;
+        left: 5%;
+        background-color: rgba(255, 255, 255, 0);
+        border: 0;
+        margin: 0;
+    }
+}

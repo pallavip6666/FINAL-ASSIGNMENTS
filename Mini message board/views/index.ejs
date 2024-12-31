@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <ul>
+        <% messages.forEach(message => { %>
+            <li>
+                <strong><%= message.user %>:</strong> <%= message.text %> <em>(<%= message.added.toDateString() %>)</em>
+            </li>
+        <% }); %>
+    </ul>
+    <a href="/new">Create a New Message</a>
+</body>
+</html>
